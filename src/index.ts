@@ -34,7 +34,7 @@ function guessTypeToRuntypDef(inType: InAnyType): OutAnyType {
   }
 }
 
-export function doit(json: unknown): string {
+export function jsonToRuntypes(json: unknown): string {
   const guesses = guess(json);
   const roots = guesses.map<RootType>((guess) => {
     return {
@@ -45,45 +45,9 @@ export function doit(json: unknown): string {
   });
 
   const source = generateRuntypes(roots, {
-    includeTypes: false,
+    includeTypes: true,
     formatRuntypeName: (name) => `${name}Rt`,
     formatTypeName: (name) => `T${name}`,
   });
   return source;
 }
-
-const data = doit({
-  _links: {
-    self: {
-      href: 'http://example.com/api/book/hal-cookbook',
-    },
-    next: {
-      href: 'http://example.com/api/book/hal-case-study',
-    },
-    prev: {
-      href: 'http://example.com/api/book/json-and-beyond',
-    },
-    first: {
-      href: 'http://example.com/api/book/catalog',
-    },
-    last: {
-      href: 'http://example.com/api/book/upcoming-books',
-    },
-  },
-  _embedded: {
-    author: {
-      _links: {
-        self: {
-          href: 'http://example.com/api/author/shahadat',
-        },
-      },
-      id: 'shahadat',
-      name: 'Shahadat Hossain Khan',
-      homepage: 'http://author-example.com',
-    },
-  },
-  id: 'hal-cookbook',
-  name: 'HAL Cookbook',
-});
-
-console.log(data);
