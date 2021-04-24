@@ -2159,10 +2159,10 @@ growly@^1.3.0:
   resolved "https://registry.yarnpkg.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
   integrity sha1-8QdIy+dq+WS3yWyTxrzCivEgwIE=
 
-guess-json-shape@^0.0.1-3:
-  version "0.0.1-3"
-  resolved "https://registry.yarnpkg.com/guess-json-shape/-/guess-json-shape-0.0.1-3.tgz#fad9afeb17f283dbecc85f5abc2f877b9c1eba6e"
-  integrity sha512-HDyWnD8eZoSBtKYnAdZ0vXSIdbf8hTTN1qNvTJ1L9fzXSLUki9RY452SGQznlwbn7QI84ezQoWrwQzayUl4d+w==
+guess-json-shape@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/guess-json-shape/-/guess-json-shape-1.0.0.tgz#a0528f540333474315dd36f7fd798b91437409c1"
+  integrity sha512-sRH7N4ay2xDFnajMB389dw4S0ga57GJbtFacPdPdGjisSwv4mU6KZJ5hwXIidgLIz6eKgPWEhy7aMgNto3CUUA==
   dependencies:
     hasha "^5.2.2"
     ramda "^0.27.1"

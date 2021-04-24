@@ -28,6 +28,6 @@
   },
   "dependencies": {
     "generate-runtypes": "^2.0.1",
-    "guess-json-shape": "^0.0.1-3"
+    "guess-json-shape": "^1.0.0"
   }
 }
