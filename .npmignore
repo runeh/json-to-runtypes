@@ -21,3 +21,8 @@ npm-debug.log*
 .editorconfig
 .eslintignore
 jest.config.js
+.prettierrc
+.vscode
+.github
+.tsconfig.json
+.eslintrc.json
