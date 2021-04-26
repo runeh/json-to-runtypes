@@ -104,5 +104,5 @@ Options:
 The command line supports pipes:
 
 ```shell
-▶ cat my-json-file.json|npx json-to-runtypes -o my-types.ts
+▶ cat my-json-file.json | npx json-to-runtypes -o my-types.ts
 ```
