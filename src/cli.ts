@@ -13,7 +13,7 @@ const main = async () => {
       'Convert JSON into Runtypes capable of parsing the same JSON shape.',
     )
     .option('-i, --input <input file>', 'Path to JSON. Can also be stdin.')
-    .option('-o, --output <output file>', 'Output file.')
+    .option('-o, --output <output file>', 'Output file. stdout if omitted,')
     .parse(process.argv);
 
   const { input, output } = prog.opts();
