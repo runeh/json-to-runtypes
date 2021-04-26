@@ -1,6 +1,6 @@
 # json-to-runtypes
 
-Convert JSON into [runtypes](https://github.com/pelotom/runtypes/) cabable of
+Convert JSON into [runtypes](https://github.com/pelotom/runtypes/) capable of
 parsing the same JSON shape.
 
 ## Example
@@ -84,4 +84,25 @@ export const RootRt = rt.Record({
 });
 
 export type TRoot = rt.Static<typeof RootRt>;
+```
+
+## Using the command line
+
+```shell
+▶ npx json-to-runtypes --help
+
+Usage: json-to-runtypes [options]
+
+Convert JSON into Runtypes capable of parsing the same JSON shape.
+
+Options:
+  -i, --input <input file> Path to JSON. Can also be stdin.
+  -o, --output <output file> Output file.
+  h, --help display help for command
+```
+
+The command line supports pipes:
+
+```shell
+▶ cat my-json-file.json|npx json-to-runtypes -o my-types.ts
 ```

@@ -6,6 +6,9 @@
   "repository": "github:runeh/json-to-runtypes",
   "homepage": "https://github.com/runeh/json-to-runtypes#readme",
   "license": "Apache-2.0",
+  "bin": {
+    "json-to-runtypes": "dist/cli.js"
+  },
   "scripts": {
     "build": "tsc",
     "test": "jest"
@@ -24,10 +27,13 @@
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
     "ts-jest": "^26.5.4",
+    "ts-node": "^9.1.1",
     "typescript": "^4.2.3"
   },
   "dependencies": {
+    "commander": "^7.2.0",
     "generate-runtypes": "^2.0.1",
+    "get-stdin": "^8.0.0",
     "guess-json-shape": "^1.0.0"
   }
 }
