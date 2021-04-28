@@ -5,7 +5,7 @@
 
 ### ⚠ BREAKING CHANGES
 
-* Add `options` argument to the `guess` function
+* Add `options` argument to the `guess` function. Changes the default options, so static types are not included 
 
 ### Features
 
