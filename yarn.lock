@@ -2040,10 +2040,10 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-generate-runtypes@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/generate-runtypes/-/generate-runtypes-2.0.1.tgz#b2fc2448fee560cf15dab109707d05322c283345"
-  integrity sha512-x3A1pGYxvS/1QjkZUISAlTPbr6WTGO/C1rThAqNjRLpBrkehkKgSW6eB0AXZWI7c5yH9wdr2FnFtykdXQGV1OA==
+generate-runtypes@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/generate-runtypes/-/generate-runtypes-2.1.0.tgz#e485e3470ad004c5fc276d209321c32e8e3ad0ad"
+  integrity sha512-yl+9aDqKX88IzdOMbY0Wf7x+Km2et5S+qyl7EepbF1wYK6lxYdiq8ujFa3dmofTmR+NVRMpzJ3fCO6kogi3VnQ==
   dependencies:
     prettier "^2.2.1"
     runtypes "^6.2.1"
@@ -2078,10 +2078,10 @@ get-package-type@^0.1.0:
   resolved "https://registry.yarnpkg.com/get-package-type/-/get-package-type-0.1.0.tgz#8de2d803cff44df3bc6c456e6668b36c3926e11a"
   integrity sha512-pjzuKtY64GYfWizNAJ0fr9VqttZkNiK2iS430LtIHzjBEr6bX8Am2zm4sW4Ro5wjWW5cAlRL1qAMTcXbjNAO2Q==
 
-get-stdin@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-8.0.0.tgz#cbad6a73feb75f6eeb22ba9e01f89aa28aa97a53"
-  integrity sha512-sY22aA6xchAzprjyqmSEQv4UbAAzRN0L2dQB0NlN5acTTK9Don6nhoc3eAbUnpZiCANAMfd/+40kVdKfFygohg==
+get-stdin@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-9.0.0.tgz#3983ff82e03d56f1b2ea0d3e60325f39d703a575"
+  integrity sha512-dVKBjfWisLAicarI2Sf+JuBE/DghV4UzNAVe9yhEJuzeREd3JhOTE9cUaJTeSa77fsbQUK3pcOpJfM59+VKZaA==
 
 get-stream@^4.0.0:
   version "4.1.0"
