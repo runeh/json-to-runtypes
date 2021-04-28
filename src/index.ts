@@ -1,9 +1,12 @@
 import {
+  GenerateOptions,
   AnyType as OutAnyType,
   RootType,
   generateRuntypes,
 } from 'generate-runtypes';
 import { AnyType as InAnyType, guess } from 'guess-json-shape';
+
+type GuessOptions = GenerateOptions;
 
 function guessTypeToRuntypDef(inType: InAnyType): OutAnyType {
   switch (inType.kind) {
@@ -32,7 +35,15 @@ function guessTypeToRuntypDef(inType: InAnyType): OutAnyType {
   }
 }
 
-export function jsonToRuntypes(json: unknown): string {
+const defaultOptions: GuessOptions = {
+  includeTypes: false,
+  formatRuntypeName: (name) => `${name}Rt`,
+};
+
+export function jsonToRuntypes(
+  json: unknown,
+  opts: GuessOptions = defaultOptions,
+): string {
   const guesses = guess(json);
   const roots = guesses.map<RootType>((guess) => {
     return {
@@ -42,10 +53,6 @@ export function jsonToRuntypes(json: unknown): string {
     };
   });
 
-  const source = generateRuntypes(roots, {
-    includeTypes: true,
-    formatRuntypeName: (name) => `${name}Rt`,
-    formatTypeName: (name) => `T${name}`,
-  });
+  const source = generateRuntypes(roots, opts);
   return source;
 }

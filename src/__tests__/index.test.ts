@@ -24,8 +24,6 @@ describe('json-to-runtypes', () => {
 
       const HeroImageRt = rt.Record({ title: rt.String, src: rt.String });
 
-      type THeroImage = rt.Static<typeof HeroImageRt>;
-
       const PostsRt = rt.Intersect(
         rt.Record({ title: rt.String }),
         rt
@@ -38,16 +36,12 @@ describe('json-to-runtypes', () => {
           .asPartial()
       );
 
-      type TPosts = rt.Static<typeof PostsRt>;
-
       export const RootRt = rt.Record({
         name: rt.String,
         age: rt.Number,
         tokens: rt.Array(rt.Never),
         posts: rt.Array(PostsRt),
       });
-
-      export type TRoot = rt.Static<typeof RootRt>;
       "
     `);
   });
