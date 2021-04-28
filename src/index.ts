@@ -7,10 +7,8 @@ import { AnyType as InAnyType, guess } from 'guess-json-shape';
 
 function guessTypeToRuntypDef(inType: InAnyType): OutAnyType {
   switch (inType.kind) {
-    case 'primitive': {
-      const t = inType.type === 'null' ? 'unknown' : inType.type;
-      return { kind: t };
-    }
+    case 'primitive':
+      return { kind: inType.type };
 
     case 'named':
       return { kind: 'named', name: inType.name };

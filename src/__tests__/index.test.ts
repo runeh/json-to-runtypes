@@ -6,10 +6,10 @@ describe('json-to-runtypes', () => {
       jsonToRuntypes({
         name: 'rune',
         age: 41,
-        tags: ['foo', 'bar', 'baz'],
+        tokens: [],
         posts: [
-          { title: 'intro', published: true },
-          { title: 'chapter-1', editorApproved: true },
+          { title: 'intro', published: true, tags: ['foo', 'bar', 'baz'] },
+          { title: 'chapter-1', editorApproved: true, tags: [] },
           {
             title: 'chapter-2',
             heroImage: {
@@ -31,6 +31,7 @@ describe('json-to-runtypes', () => {
         rt
           .Record({
             published: rt.Boolean,
+            tags: rt.Array(rt.String),
             editorApproved: rt.Boolean,
             heroImage: HeroImageRt,
           })
@@ -42,7 +43,7 @@ describe('json-to-runtypes', () => {
       export const RootRt = rt.Record({
         name: rt.String,
         age: rt.Number,
-        tags: rt.Array(rt.String),
+        tokens: rt.Array(rt.Never),
         posts: rt.Array(PostsRt),
       });
 
