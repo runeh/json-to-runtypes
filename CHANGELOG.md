@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.1](https://www.github.com/runeh/json-to-runtypes/compare/v1.1.0...v1.1.1) (2021-04-28)
+
+
+### Bug Fixes
+
+* use null instead of unknown ([030fa56](https://www.github.com/runeh/json-to-runtypes/commit/030fa56b01dd3f5d7e85826da7d1b803b6e3a06b))
+
 ## [1.1.0](https://www.github.com/runeh/json-to-runtypes/compare/v1.0.0...v1.1.0) (2021-04-26)
 
 
