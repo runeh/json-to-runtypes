@@ -1,6 +1,6 @@
 {
   "name": "json-to-runtypes",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "dist/index.js",
   "author": "Rune Finstad Halvorsen",
   "repository": "github:runeh/json-to-runtypes",

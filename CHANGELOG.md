@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.0.1](https://www.github.com/runeh/json-to-runtypes/compare/v2.0.0...v2.0.1) (2022-11-28)
+
+
+### Bug Fixes
+
+* allow names that are invalid js identifiers ([#8](https://www.github.com/runeh/json-to-runtypes/issues/8)) ([ab7aec6](https://www.github.com/runeh/json-to-runtypes/commit/ab7aec6d0cc751e52e43c0e0cb737567dc929c23))
+
 ## [2.0.0](https://www.github.com/runeh/json-to-runtypes/compare/v1.1.0...v2.0.0) (2021-04-28)
 
 
