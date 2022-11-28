@@ -9,10 +9,8 @@ module.exports = {
     '.*/fixtures.ts',
     '.*dist.*',
   ],
-
-  globals: {
-    'ts-jest': {
-      tsconfig: 'tsconfig.json',
-    },
-  },
+  snapshotFormat: {
+    escapeString: false,
+    printBasicPrototype: false
+  }
 };
