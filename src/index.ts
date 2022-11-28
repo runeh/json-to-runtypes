@@ -35,9 +35,23 @@ function guessTypeToRuntypDef(inType: InAnyType): OutAnyType {
   }
 }
 
+const startsWithNumberRegex = /^\d/;
+
+/**
+ * If the name starts with a number, which is not allowed for identifiers in
+ * JavaScript, add a leading underscore to the name and return the new name.
+ * Otherwise, return the input unchanged.
+ *
+ * Copied from the generate-runtypes package
+ */
+function makeValidIdentifier(name: string): string {
+  return startsWithNumberRegex.test(name) ? `_${name}` : name;
+}
+
 const defaultOptions: GuessOptions = {
   includeTypes: false,
-  formatRuntypeName: (name) => `${name}Rt`,
+  formatRuntypeName: (name) => makeValidIdentifier(`${name}Rt`),
+  formatTypeName: (name) => makeValidIdentifier(name),
 };
 
 export function jsonToRuntypes(
