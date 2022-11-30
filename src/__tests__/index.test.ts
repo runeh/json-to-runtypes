@@ -20,7 +20,7 @@ describe('json-to-runtypes', () => {
         ],
       }),
     ).toMatchInlineSnapshot(`
-      "import * as rt from \\"runtypes\\";
+      "import * as rt from "runtypes";
 
       const HeroImageRt = rt.Record({ title: rt.String, src: rt.String });
 
@@ -48,11 +48,11 @@ describe('json-to-runtypes', () => {
 
   it('Deals with invalid JS identifiers', () => {
     expect(jsonToRuntypes({ '0': { foo: 'value' } })).toMatchInlineSnapshot(`
-      "import * as rt from \\"runtypes\\";
+      "import * as rt from "runtypes";
 
       const _0Rt = rt.Record({ foo: rt.String });
 
-      export const RootRt = rt.Record({ \\"0\\": _0Rt });
+      export const RootRt = rt.Record({ "0": _0Rt });
       "
     `);
   });
